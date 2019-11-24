@@ -33,32 +33,6 @@ Now you can use `displayObject()` with an array of complex objects:
       ]});
   </script>
 ```
-## tl;dr
-
-If you want to display a large json object, you can use the `w3-repeat` attribute
-in combination with `displayObject()`
-
-```
-<table id="id01">
-  <tr w3-repeat="customers">
-    <td>{{CustomerName}}</td>
-    <td>{{City}}</td>
-    <td>{{Country}}</td>
-  </tr>
-</table>
-
-<script>
-  w3.displayObject("id01", {
-      "customers":[
-        {"CustomerName" : "Alfreds Futterkiste","City" : "Berlin","Country" : "Germany"},
-        {"CustomerName" : "Berglunds snabbköp","City" : "Luleå","Country" : "Sweden"},
-        {"CustomerName" : "Centro comercial Moctezuma","City" : "México D.F.","Country" : "Mexico"}
-      ]});
-</script>
-```
-
-But it only works for flat objects. You cant use something like `{{Customer.Address.Zip}}`.
-That is the reason for this fork.
 
 ## JSONPath
 
