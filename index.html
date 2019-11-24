@@ -7,6 +7,22 @@
   <script src="https://yacdn.org/serve/https://raw.githubusercontent.com/lalyos/w3.js/master/w3.js"></script>
 </head>
 <body class="w3-light-grey" >
+  <pre>
+      &lt;table class="w3-table-all" id="table1" >
+        &lt;tr w3-repeat="person in people">
+          &lt;td>{{person.name}}&lt;/td>
+          &lt;td>{{person.age}}&lt;/td>
+          &lt;td>{{person.address.city}}&lt;/td>
+        &lt;/tr>
+      &lt;/table>
+      &lt;script>    
+          w3.displayObject("table1", {"people": [
+            {"name": "Karl", "age": 32, "address": {"city":"London", "zip":"NX3AZ"} },
+            {"name": "Katrin", "age": 28, "address": {"city":"Berlin", "zip":"9999"} },
+            {"name": "Bob", "age": 77, "address": {"city":"Texas", "zip":"5555"} }
+          ]});
+      &lt;/script>
+    </pre>    
   <table class="w3-table-all" id="table1" >
     <tr w3-repeat="person in people">
       <td>{{person.name}}</td>
@@ -21,22 +37,5 @@
         {"name": "Bob", "age": 77, "address": {"city":"Texas", "zip":"5555"} }
       ]});
   </script>
-
-  <pre>
-    <table class="w3-table-all" id="table1" >
-      <tr w3-repeat="person in people">
-        <td>{{person.name}}</td>
-        <td>{{person.age}}</td>
-        <td>{{person.address.city}}</td>
-      </tr>
-    </table>
-    <script>    
-        w3.displayObject("table1", {"people": [
-          {"name": "Karl", "age": 32, "address": {"city":"London", "zip":"NX3AZ"} },
-          {"name": "Katrin", "age": 28, "address": {"city":"Berlin", "zip":"9999"} },
-          {"name": "Bob", "age": 77, "address": {"city":"Texas", "zip":"5555"} }
-        ]});
-    </script>
-  </pre>
 </body>
 </html>
