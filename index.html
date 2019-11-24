@@ -21,5 +21,22 @@
         {"name": "Bob", "age": 77, "address": {"city":"Texas", "zip":"5555"} }
       ]});
   </script>
+
+  <pre>
+    <table class="w3-table-all" id="table1" >
+      <tr w3-repeat="person in people">
+        <td>{{person.name}}</td>
+        <td>{{person.age}}</td>
+        <td>{{person.address.city}}</td>
+      </tr>
+    </table>
+    <script>    
+        w3.displayObject("table1", {"people": [
+          {"name": "Karl", "age": 32, "address": {"city":"London", "zip":"NX3AZ"} },
+          {"name": "Katrin", "age": 28, "address": {"city":"Berlin", "zip":"9999"} },
+          {"name": "Bob", "age": 77, "address": {"city":"Texas", "zip":"5555"} }
+        ]});
+    </script>
+  </pre>
 </body>
 </html>
