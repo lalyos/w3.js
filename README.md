@@ -1,7 +1,38 @@
+> [W3.JS](https://www.w3schools.com/w3js/default.asp) is a JavaScript library designed to simplify web development projects
 
-> W3.JS is a JavaScript library designed to simplify web development projects
+It has a nice [displayObject](https://www.w3schools.com/w3js/w3js_display.asp) function,
+but it lacks proper JSONPath support. I've combined `w3.js` and `jsonpath.js` 
+with a minimal glue function into a single file.
 
+## Usage
 
+Add inside the html `<head>`:
+```
+<script src="https://raw.githubusercontent.com/lalyos/w3.js/master/w3.js"></script>
+```
+
+Or if you run into `Cross-Origin Read Blocking (CORB)`, then use this:
+```
+<script src="https://yacdn.org/serve/https://raw.githubusercontent.com/lalyos/w3.js/master/w3.js"></script>
+```
+
+Now you can use `displayObject()` with an array of complex objects:
+```
+  <table class="w3-table-all" id="table1" >
+    <tr w3-repeat="person in people">
+      <td>{{person.name}}</td>
+      <td>{{person.age}}</td>
+      <td>{{person.address.city}}</td>
+    </tr>
+  </table>
+  <script>    
+      w3.displayObject("table1", {"people": [
+        {"name": "Karl", "age": 32, "address": {"city":"London", "zip":"NX3AZ"} },
+        {"name": "Katrin", "age": 28, "address": {"city":"Berlin", "zip":"9999"} },
+        {"name": "Bob", "age": 77, "address": {"city":"Texas", "zip":"5555"} }
+      ]});
+  </script>
+```
 ## tl;dr
 
 If you want to display a large json object, you can use the `w3-repeat` attribute
