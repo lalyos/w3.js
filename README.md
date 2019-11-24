@@ -33,6 +33,7 @@ Now you can use `displayObject()` with an array of complex objects:
       ]});
   </script>
 ```
+Complete example [source](https://github.com/lalyos/w3.js/blob/gh-pages/index.html#L26-L39)
 
 See live exampe above [gh-pages](https://lalyos.github.io/w3.js/)
 
