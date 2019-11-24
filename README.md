@@ -34,6 +34,8 @@ Now you can use `displayObject()` with an array of complex objects:
   </script>
 ```
 
+See live exampe above [gh-pages](https://lalyos.github.io/w3.js/)
+
 ## JSONPath
 
 XPath is a language for addressing parts of an XML document. It has a [specification at w3c](https://www.w3.org/TR/xpath/all/).
